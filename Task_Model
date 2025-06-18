@@ -1,0 +1,44 @@
+TABLE measures
+m_id number,
+m_name vc50
+
+TABLE products
+p_id number,
+p_code vc10,
+p_name vc255,
+p_msr_id number -> FK m_id
+
+TABLE customers
+c_id number number
+c_first_name vc50
+c_surname vc50
+c_family_name vc 50
+c_email vc50
+c_phone number
+c_address vc255
+
+TABLE invoice_details
+d_id number,
+d_product_id number, --> FK p_id
+d_quantity number,
+(визуализация на m_name, мярката)
+d_unit_price number
+d_total_price number ( = d_quantity  * d_unit_price )
+
+TABLE invoice
+i_id number
+i_currency_id --> FK v_id
+i_seller_id number --> FK c_id
+i_bayer_id number --> FK c_id
+i_invoice_date date
+i_invoice_total_price number
+i_status number -> FK s_id // paid, pending, rejected 
+
+TABLE inv_status
+s_id number
+s_name vc20
+
+TABLE currencies
+v_id number
+v_name vc20
+
