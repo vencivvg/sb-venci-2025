@@ -22,7 +22,7 @@ String phoneNumber;
 String address;
 }
 
-class Users extends Customers{
+class Users extends Partners{
 long id;
 String userName;
 String passWord;
