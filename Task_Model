@@ -10,13 +10,15 @@ String name;
 Long msrId;
 }
 
-class Customers{
+class Partners{
 long id;
+String eik;
 String firstName;
 String surName;
 String familyName;
+String companyName;
 String email;
-String  phoneNumber;
+String phoneNumber;
 String address;
 }
 
@@ -24,7 +26,7 @@ class Users extends Customers{
 long id;
 String userName;
 String passWord;
-String userRole;
+String userRole;  // ADMIN, POWERUSER, USER
 }
 
 class Invoice_Details{
@@ -37,6 +39,7 @@ double totalPrice // ( = d_quantity  * d_unit_price )
 
 class Invoice{
 long id;
+long issuerId;
 int currencyId;
 long sellerId;
 long buyerId;
@@ -52,6 +55,6 @@ String name;
 
 class currencies{
 int id;
-String currencyCode;
+String currencyCode; // BGN, EUR, USD, GBP, CHF
 }
 
