@@ -1,4 +1,4 @@
-class Measures{   1-бтойка 2-кг 3литър
+class Measures{   1-бройка, 2-кг, 3-литър, 4-метър, 5-кв. метър
 long id;
 String name;
 }
