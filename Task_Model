@@ -11,6 +11,7 @@ int msrId;
 }
 
 class Partners{
+long id;
 String eik;
 String firstName;
 String surName;
@@ -22,7 +23,6 @@ String address;
 }
 
 class Users extends Partners{
-long id;
 String userName;
 String passWord;
 String userRole;  // ADMIN, POWERUSER, USER
@@ -34,6 +34,7 @@ long productId;
 double quantity;
 double unitPrice
 double totalPrice // ( = d_quantity  * d_unit_price )
+long invoiceId;
 }
 
 class Invoice{
