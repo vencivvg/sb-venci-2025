@@ -29,15 +29,6 @@ String passWord;
 String userRole;  // ADMIN, POWERUSER, USER
 }
 
-class Invoice_Details{
-long id;
-long productId;
-double quantity;
-double unitPrice
-double totalPrice // ( = d_quantity  * d_unit_price )
-long invoiceId;
-}
-
 class Invoice{
 long id;
 long issuerId;
@@ -48,6 +39,16 @@ date invoiceDate;
 long invoiceTotalPrice;
 long status;  // FK s_id // paid, pending, rejected 
 }
+
+class Invoice_Details{
+long id;
+long productId;
+double quantity;
+double unitPrice
+double totalPrice // ( = d_quantity  * d_unit_price )
+long invoiceId;
+}
+
 
 class InvoiceStatus{
 long id;
