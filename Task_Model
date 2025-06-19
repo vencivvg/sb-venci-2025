@@ -8,6 +8,7 @@ long id;
 String code;
 String name;
 int msrId;
+double defaultPrice;
 }
 
 class Partners{
@@ -53,8 +54,7 @@ long id;
 String name;
 }
 
-class currencies{
+class Currencies{
 int id;
 String currencyCode; // BGN, EUR, USD, GBP, CHF
 }
-
