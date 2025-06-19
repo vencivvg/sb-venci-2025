@@ -1,44 +1,57 @@
-TABLE measures
-m_id number,
-m_name vc50
+class Measures{   1-бтойка 2-кг 3литър
+long id;
+String name;
+}
 
-TABLE products
-p_id number,
-p_code vc10,
-p_name vc255,
-p_msr_id number -> FK m_id
+class Products{
+long id;
+String code;
+String name;
+Long msrId;
+}
 
-TABLE customers
-c_id number number
-c_first_name vc50
-c_surname vc50
-c_family_name vc 50
-c_email vc50
-c_phone number
-c_address vc255
+class Customers{
+long id;
+String firstName;
+String surName;
+String familyName;
+String email;
+String  phoneNumber;
+String address;
+}
 
-TABLE invoice_details
-d_id number,
-d_product_id number, --> FK p_id
-d_quantity number,
-(визуализация на m_name, мярката)
-d_unit_price number
-d_total_price number ( = d_quantity  * d_unit_price )
+class Users extends Customers{
+long id;
+String userName;
+String passWord;
+String userRole;
+}
 
-TABLE invoice
-i_id number
-i_currency_id --> FK v_id
-i_seller_id number --> FK c_id
-i_bayer_id number --> FK c_id
-i_invoice_date date
-i_invoice_total_price number
-i_status number -> FK s_id // paid, pending, rejected 
+class Invoice_Details{
+long id;
+long productId;
+double quantity;
+double unitPrice
+double totalPrice // ( = d_quantity  * d_unit_price )
+}
 
-TABLE inv_status
-s_id number
-s_name vc20
+class Invoice{
+long id;
+int currencyId;
+long sellerId;
+long buyerId;
+date invoiceDate;
+long invoiceTotalPrice;
+long status;  // FK s_id // paid, pending, rejected 
+}
 
-TABLE currencies
-v_id number
-v_name vc20
+class InvoiceStatus{
+long id;
+String name;
+}
+
+class currencies{
+int id;
+String currencyCode;
+}
 
