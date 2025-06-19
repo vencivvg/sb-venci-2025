@@ -7,7 +7,7 @@ class Products{
 long id;
 String code;
 String name;
-Long msrId;
+int msrId;
 }
 
 class Partners{
